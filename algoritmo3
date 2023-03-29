@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var num1, num2, num3, num4 float64
+	for {
+		fmt.Println("digite 4 numeros(digite 0 para parar):")
+		_, n := fmt.Scan(&num1, &num2, &num3, &num4)
+		if n != nil {
+			fmt.Println(n)
+			break
+		}
+		if num1 == 0 && num2 == 0 && num3 == 0 && num4 == 0 {
+			break
+		}
+		if num1 != 0 || num2 != 0 || num3 != 0 || num4 != 0 {
+			break
+		}
+	}
+	nums := []float64{num1, num2, num3, num4}
+	fmt.Print(nums)
+
+	produto := 1.0
+	for _, num := range nums {
+		produto *= num
+	}
+	fmt.Printf("o valor é %.2f", produto)
+}
