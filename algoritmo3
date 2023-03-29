@@ -7,6 +7,9 @@ func main() {
 	for {
 		fmt.Println("digite 4 numeros:")
 		fmt.Scan(&num1, &num2, &num3, &num4)
+		if num1 == 0 && num2 == 0 && num3 == 0 && num4 == 0 {
+			break
+		}
 		if num1 != 0 && num2 != 0 && num3 != 0 && num4 != 0 {
 			break
 		}
