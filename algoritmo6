@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+	nums := [10]int{4, 5, 2, 7, 5, 9, 1, 22, 17, 45}
+	var num int
+	fmt.Println("me informe um valor:")
+	fmt.Scan(&num)
+	for _, numero := range nums {
+		if num == numero {
+			fmt.Printf("%d está no array\n\n%d", num, nums)
+			break
+		} else {
+			fmt.Printf("%d não está no array\n\n%d", num, nums)
+			break
+		}
+	}
+}
