@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	nomes := []string{"fluminense", "campeao", "mundioso", "melhor", "vencedor", "top1", "ganhador", "nunca perde"}
+	var nome string
+	fmt.Println("adjetivo para o fluminense:")
+	fmt.Scan(&nome)
+	novaslice := make([]string, 0, len(nomes))
+	for _, rs := range nomes {
+		if nome == rs {
+			fmt.Print(nomes)
+			break
+		}
+		if nome != rs {
+			novaslice = append(nomes, nome)
+		}
+	}
+	fmt.Print(novaslice)
+}
