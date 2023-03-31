@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	numero := []int{1, 5, 3, 7, 2, 9, 22, 65, 42, 12}
+	sort.Ints(numero)
+	min := numero[0]
+	max := numero[len(numero)-1]
+	fmt.Printf("%d é o valor mínimo e %d é o valor máximo", min, max)
+
+}
