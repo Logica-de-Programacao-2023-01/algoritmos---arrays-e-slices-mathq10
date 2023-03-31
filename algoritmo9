@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	numero := []float64{1, 2, 3, 4, 5, 6}
+	var num float64
+	fmt.Println("informe um numero decimal:")
+	fmt.Scan(&num)
+	novaslice := make([]float64, 0, len(numero))
+	for _, rs := range numero {
+		if num != rs {
+			novaslice = append(novaslice, num)
+		}
+	}
+	fmt.Print(novaslice)
+}
