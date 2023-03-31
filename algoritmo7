@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	nums := []int{4, 2, 3, 6, 8}
+	var num int
+	fmt.Println("informe-me um número:")
+	fmt.Scan(&num)
+	for _, existe := range nums {
+		if num == existe {
+			fmt.Print("Ele já esta presente na slice")
+			continue
+
+		} else {
+			nums = append(nums, num)
+			fmt.Printf("sua nova slice é %d", nums)
+			break
+		}
+	}
+}
