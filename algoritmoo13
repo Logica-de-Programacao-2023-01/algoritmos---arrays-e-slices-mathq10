@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [7]int{2, 3, 1, 4, 5, 8, 6}
+	var num int
+	fmt.Print("Informe um número: ")
+	fmt.Scan(&num)
+
+	array[0] += num
+	array[len(array)-1] += num
+
+	fmt.Printf("Array resultante: %v\n", array)
+}
