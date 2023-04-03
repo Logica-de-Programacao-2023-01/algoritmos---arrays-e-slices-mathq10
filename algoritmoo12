@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [5]int{15, 3, 4, 21, 30}
+	var novoslice []int
+	for _, x := range array {
+		if x%3 == 0 {
+			novoslice = append(novoslice, x)
+		}
+	}
+	fmt.Printf("sua nova slice é:\n%d", novoslice)
+
+}
