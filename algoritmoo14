@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	nums := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	var num int
+	fmt.Print("esse é o seu slice\n", nums)
+	fmt.Println("\nAgora mude a posição do 3 o escrevendo abaixo:")
+	fmt.Scan(&num)
+	nums = append(nums[:2], nums[3:]...)
+	nums = append(nums, 3)
+	fmt.Print(nums)
+}
