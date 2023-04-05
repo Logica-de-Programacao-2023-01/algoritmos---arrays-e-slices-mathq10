@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	var num int
+	fmt.Println("digite um número inteiro positivo:")
+	fmt.Scan(&num)
+
+	primos := []int{}
+
+	for i := 2; len(primos) < num; i++ {
+		primosim := true
+		for j := 2; j < i; j++ {
+			if i%j == 0 {
+				primosim = false
+				break
+			}
+		}
+		if primosim {
+			primos = append(primos, i)
+		}
+	}
+	fmt.Printf("o seu array com %d números primos é:\n%d", num, primos)
+}
