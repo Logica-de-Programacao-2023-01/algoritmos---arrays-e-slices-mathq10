@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+func main() {
+	var num int
+	fmt.Println("digite o tamanho do array:")
+	fmt.Scan(&num)
+
+	array := make([]int, num)
+	fmt.Println("digite os números desse array em ordem crescente:")
+
+	for i := 0; i < num; i++ {
+		fmt.Scan(&array[i])
+	}
+	crescente := true
+
+	for i := 1; i < num; i++ {
+		if array[i] < array[i-1] {
+			crescente = false
+			break
+		}
+	}
+	if crescente {
+		fmt.Printf("certinho, os numeros estão em ordem crescente\n%d", array)
+	} else {
+		fmt.Print("os números não estao em ordem crescente\n\n")
+		fmt.Println("digite, AGORA CERTO, os números em ordem cresente:")
+		for i := 0; i < num; i++ {
+			fmt.Scan(&array[i])
+		}
+		fmt.Printf("AGORA SIM ESTA CERTINHO\n%d", array)
+
+	}
+
+}
