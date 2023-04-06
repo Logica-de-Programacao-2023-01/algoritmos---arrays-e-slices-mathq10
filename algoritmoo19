@@ -1,0 +1,27 @@
+func main() {
+	var num int
+	fmt.Println("digite o tamanho dos arrays:")
+	fmt.Scan(&num)
+
+	array := make([]int, num)
+	array2 := make([]int, num)
+	arraysoma := make([]int, num)
+
+	fmt.Println("digite os números do priemiro array:")
+	for i := 0; i < num; i++ {
+		fmt.Scan(&array[i])
+
+	}
+	fmt.Print(array)
+	fmt.Println("\ndigite os números do segundo array:")
+	for i := 0; i < num; i++ {
+		fmt.Scan(&array2[i])
+
+	}
+	fmt.Print(array2)
+	for i := 0; i < num; i++ {
+		arraysoma[i] += array[i] + array2[i]
+	}
+	fmt.Print("\nsoma: ", arraysoma)
+
+}
